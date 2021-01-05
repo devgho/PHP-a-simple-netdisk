@@ -1,0 +1,234 @@
+html{
+    font-size:62.5%;
+}
+body{
+    background:black;
+    font-size:1.4rem;
+    margin:0px;
+    font-family: 微软雅黑;
+    /* background: url("../img/tile.jpg"); */
+    padding:0px;
+}
+ul,li{
+   list-style: none; 
+   padding:0px;
+   margin:0px;
+}
+header{
+    height:60px;
+    background:rgba(0,0,0,.1);
+    box-shadow:0px 4px 7px rgba(0,0,0,.5);
+    border-radius:0px 0px 7px 7px;
+}
+.header{
+    height:60px;
+}
+.header>div{
+    line-height: 60px;
+    height:60px;
+}
+.header>div:first-child>div{
+    border-radius:50px;
+    max-width: 20rem;
+    min-width: 18rem;
+    background:linear-gradient(40deg,coral,blue);
+}
+.header>div:first-child>div>img{
+    transition-duration: 2s;
+    animation: logo 2s infinite alternate forwards;
+    border-radius:25px;
+    height:50px;
+}
+.header>div:first-child>div>img:hover{
+    transform:rotateY(180deg);
+}
+.header>div:nth-child(2)>ul{
+    display:flex;
+    justify-content: space-between;
+}
+.header>div:nth-child(2)>ul>li{
+    text-align: center;
+    font-weight: bold;
+    width:15%;
+}
+.header>div:nth-child(2)>ul>li>a{
+    color:violet;
+    text-decoration: none;
+}
+.header>div:nth-child(2)>ul>li>a:hover{
+    cursor: pointer;
+}
+/* 资源查找 */
+.header>div:nth-child(2)>ul>li:nth-child(2)>form{
+    transform:scale(0.001);
+    position:absolute;
+}
+.header>div:nth-child(2)>ul>li:nth-child(2):hover>a{
+    display:none;
+}
+.header>div:nth-child(2)>ul>li:nth-child(2):hover>form{
+    transform:scale(1);
+    transition:transform 1s;
+}
+.header>div:nth-child(2)>ul>li:nth-child(2){
+    width:25%;
+}
+.header>div:nth-child(2)>ul>li:nth-child(4)>a{
+    position:relative;
+    z-index: 2;
+}
+#select{
+    z-index: 1;
+    margin-top: -30rem;
+    margin-left: 1rem;
+    /* transform:scale(0.01); */
+    /* display: none; */
+    transition:all 1s;
+    line-height: 3rem;
+    position:absolute;
+    transition:all 1s;
+    border-radius: 8px;
+    background:rgba(255,255,255,.3);
+    transition:all 1s;
+}
+#select>li{
+    padding:1rem 2rem;
+}
+.header>div:nth-child(2)>ul>li:hover{
+    animation: header 1s forwards;
+}
+.header>div:nth-child(2)>ul>li:nth-child(5):hover>div{
+    transform:scale(1.0);
+}
+.header>div:nth-child(2)>ul>li:nth-child(5)>div{
+    transition:transform 1s;
+    position:absolute;
+    margin-left:-2.5rem;
+    z-index: 1;
+    transform:scale(0.001) translate(0px,-300px);
+}
+.header>div:nth-child(2)>ul>li:nth-child(5)>div>img{
+    width:20rem;
+}
+/* 小屏header */
+.header>div:last-child>i{
+    font-size:3rem;
+    color:aliceblue;
+}
+.header>div:last-child{
+    text-align: right;
+    position: relative;
+    z-index: 1;
+}
+.header>div:last-child>ul{
+    background: rgba(255,255,255,.8);
+    border-radius:5px;
+}
+.header>div:last-child>ul>li{
+    text-align: left;
+}
+#morefeature:hover>ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#morefeature>ul{
+    display:none;
+}
+.banner{   
+    background: url(../img/bc10.jpg) center;
+    background-size:cover;
+    position: absolute;
+    top:0rem;
+    height: 100%;
+    z-index: -2;
+    width:100%;
+}
+h1{
+    font-family: Segoe Print;
+    position: relative;
+    z-index: -2;
+    color:slateblue;
+}
+/* 资源列表 */
+.resource{
+    background:rgba(0,0,0, .3);
+    color:white;
+    font-size: 1.6rem;
+}
+/* 选中行高亮 */
+.resource>form>ul:hover{
+    background: rgba(0,0,0,.3);
+}
+.resource>form>ul{
+    border-bottom: 1px double lightblue;
+    word-wrap: break-word;
+}
+.resource>form>ul:first-child:hover{
+    background:none;
+}
+.resource>form>ul:first-child{
+    color:lightpink;
+    border-bottom: 1px solid lightblue;
+}
+.resource>form>ul>li>a{
+    color:lightskyblue;
+}
+/* 使文件上传隐藏并在上面盖上span重写样式 */
+#file_up{
+    position:absolute;
+    height:4rem;
+    width:25rem;
+    line-height: 4rem;
+    background: transparent;
+    align-items: center;
+    transition:all 1s;
+    transform:scale(0.01);
+    left:-8rem;
+}
+#file_up>span{
+    font-weight:lighter;
+    color:aquamarine;
+}
+#fileinp{
+    position: absolute;
+    left:0;
+    top:0;
+    width:70%;
+    opacity: 0;
+}
+.mybutton{
+    border-radius:6px;
+    background:transparent;
+    color:lightgreen;
+    width:30%;
+    height: 4rem;
+    padding: 0px;
+    border:lightgreen solid 1px;
+    float: right;
+    line-height: 4rem;
+}
+/* 批处理sidebar */
+#sidebar{
+    position:fixed;
+    border-radius: 5px;
+    background: rgba(255,255,255,.5);
+    top:calc(50% - 6rem);
+    padding:.4rem 0;
+}
+@keyframes logo{
+    100%{
+        box-shadow:0px 0px 10px 3px black;
+    }
+}
+@keyframes header{
+    100%{
+        background:rgba(255,255,255,.3);
+    }
+}
+/* bootstrap在EDGE浏览器中屏幕大小到767.2px时会出现sm和md元素同存的问题 */
+@media screen and (max-width:767.2px){
+    .header>div:nth-child(2){
+        display:none;
+    }
+}
